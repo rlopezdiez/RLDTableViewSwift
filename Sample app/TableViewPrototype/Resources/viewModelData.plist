@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>Moscow</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157602083268883/</string>
+				<key>class</key>
+				<string>RLDBigPictureTableViewCellModel</string>
+				<key>date</key>
+				<string>2 years ago</string>
+				<key>imageName</key>
+				<string>6_big.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/1406925773/in/set-72157602083268883</string>
+				<key>title</key>
+				<string>The colorful Cathedral of Vasily the Blessed</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>Amsterdam</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157603544030165/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>4 years ago</string>
+				<key>imageName</key>
+				<string>3_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/2135948414/in/set-72157603544030165</string>
+				<key>title</key>
+				<string>Quiet canals in the “Venice of the North”</string>
+				<key>editable</key>
+				<true/>
+				<key>editingStyle</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>London</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157594446615513/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>Today</string>
+				<key>imageName</key>
+				<string>9_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/337540114/in/set-72157594446615513</string>
+				<key>title</key>
+				<string>Tower Bridge, one of the most iconic bridges in the world</string>
+				<key>editable</key>
+				<true/>
+				<key>editingStyle</key>
+				<integer>1</integer>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>Kuramathi</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157627990642402/</string>
+				<key>class</key>
+				<string>RLDBigPictureTableViewCellModel</string>
+				<key>date</key>
+				<string>3 weeks ago</string>
+				<key>imageName</key>
+				<string>4_big.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/6286531716/in/set-72157627990642402</string>
+				<key>title</key>
+				<string>Sea Salt&apos;s crab unwinding in the beach</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>Rasdhoo</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157627991759766/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>Today</string>
+				<key>imageName</key>
+				<string>1_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/6286903694/in/set-72157627990642402</string>
+				<key>title</key>
+				<string>The Maldives, home of beautiful beaches</string>
+				<key>editable</key>
+				<true/>
+				<key>movable</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>Swiss Alps</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157625889560426/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>7 years ago</string>
+				<key>imageName</key>
+				<string>0_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/5384467483/in/set-72157625889560426</string>
+				<key>title</key>
+				<string>Picturesque peak covered with snow</string>
+				<key>editable</key>
+				<true/>
+				<key>movable</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>Tenerife</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157594446322517/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>Yesterday</string>
+				<key>imageName</key>
+				<string>8_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/3556768497/in/set-72157594446322517</string>
+				<key>title</key>
+				<string>Mount Teide, a 3,718 meter high vulcano</string>
+				<key>editable</key>
+				<true/>
+				<key>movable</key>
+				<true/>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>Magnificent scenery</string>
+	</dict>
+	<dict>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>class</key>
+				<string>RLDCommentTableViewCellModel</string>
+				<key>comment</key>
+				<string>This building is the seat of the National Assembly of Hungary, and one of the most awesome constructions in Budapest</string>
+				<key>imageName</key>
+				<string>7_big.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/336410485/in/set-72157594444731896</string>
+				<key>title</key>
+				<string>The Hungarian Parliament</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>Rome</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157594444449793/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>3 weeks ago</string>
+				<key>imageName</key>
+				<string>5_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/188286231/in/set-72157594444449793</string>
+				<key>title</key>
+				<string>Coliseum, or Flavian Amphitheatre</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>Paris</string>
+				<key>categoryURL</key>
+				<string>https://www.flickr.com/photos/keoki/sets/72157594444442779/</string>
+				<key>class</key>
+				<string>RLDSimpleTableViewCellModel</string>
+				<key>date</key>
+				<string>1 month ago</string>
+				<key>imageName</key>
+				<string>2_small.jpg</string>
+				<key>imageURL</key>
+				<string>https://www.flickr.com/photos/keoki/188266460/in/set-72157594444442779</string>
+				<key>title</key>
+				<string>The Basilica of the Sacré-Cœur of Paris</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>Singular buildings</string>
+	</dict>
+</array>
+</plist>

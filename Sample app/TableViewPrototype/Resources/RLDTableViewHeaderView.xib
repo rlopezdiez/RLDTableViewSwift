@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="43X-QC-Slb" userLabel="RLDTableViewHeaderView" customClass="RLDTableViewHeaderView" customModule="TableViewPrototype">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yK-8V-tMD" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Picteris Luxum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMF-YT-BCB" userLabel="Title">
+                            <rect key="frame" x="8" y="23" width="398" height="32"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="gMF-YT-BCB" firstAttribute="top" relation="lessThanOrEqual" secondItem="6yK-8V-tMD" secondAttribute="top" constant="26" id="4Nl-Qx-3t9"/>
+                        <constraint firstItem="gMF-YT-BCB" firstAttribute="trailing" secondItem="6yK-8V-tMD" secondAttribute="trailingMargin" id="L8J-Bt-wxI"/>
+                        <constraint firstAttribute="bottom" secondItem="gMF-YT-BCB" secondAttribute="bottom" constant="5" id="afn-5o-8Oz"/>
+                        <constraint firstItem="gMF-YT-BCB" firstAttribute="leading" secondItem="6yK-8V-tMD" secondAttribute="leadingMargin" id="qPe-wJ-Qxd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="6yK-8V-tMD" firstAttribute="top" secondItem="43X-QC-Slb" secondAttribute="top" id="LRR-gq-7JM"/>
+                <constraint firstAttribute="trailing" secondItem="6yK-8V-tMD" secondAttribute="trailing" id="cpZ-Fg-hS3"/>
+                <constraint firstAttribute="bottom" secondItem="6yK-8V-tMD" secondAttribute="bottom" id="sOR-aP-Y5p"/>
+                <constraint firstItem="6yK-8V-tMD" firstAttribute="leading" secondItem="43X-QC-Slb" secondAttribute="leading" id="wRI-m9-jnF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="text" destination="gMF-YT-BCB" id="14f-n1-X38"/>
+            </connections>
+            <point key="canvasLocation" x="418" y="363"/>
+        </view>
+    </objects>
+</document>
