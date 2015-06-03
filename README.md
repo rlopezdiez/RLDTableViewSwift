@@ -66,7 +66,7 @@ This class is a drop-in replacement of `UITableViewController`. It just requires
 To use the latest stable release of `RLDTableViewSwift`, just add the following to your project `Podfile`:
 
 ```
-pod 'RLDTableViewSwift', '~> 0.2.0' 
+pod 'RLDTableViewSwift', '~> 0.2.1' 
 ```
 
 If you like to live on the bleeding edge, you can use the `master` branch with:
