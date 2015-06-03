@@ -55,7 +55,7 @@ public class RLDTableViewController:UIViewController {
     private var tableViewDataSource:RLDTableViewDataSource?
     private var tableViewDelegate:RLDTableViewDelegate?
     
-    var tableViewModel:RLDTableViewModel? {
+    public var tableViewModel:RLDTableViewModel? {
         didSet {
             if let tableViewModel = tableViewModel {
                 tableViewDataSource = RLDTableViewDataSource(tableViewModel:tableViewModel)
@@ -69,7 +69,7 @@ public class RLDTableViewController:UIViewController {
     }
     
     // MARK: View management
-    lazy var tableView: UITableView? = {
+    lazy public var tableView: UITableView? = {
         return UITableView(frame:CGRectZero)
         }()
     
