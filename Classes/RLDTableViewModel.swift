@@ -79,18 +79,18 @@ public class RLDTableViewSectionModel:Equatable {
     // MARK: Insertions
     public var defaultCellModelClassForInsertions:String?
     
-    public func add(#cellModel:RLDTableViewCellModel) {
+    public func add(cellModel:RLDTableViewCellModel) {
         cellModel.set(sectionModel:self)
         cellModels.append(cellModel)
     }
     
-    public func insert(#cellModel:RLDTableViewCellModel, atIndex index:Int) {
+    public func insert(cellModel:RLDTableViewCellModel, atIndex index:Int) {
         cellModel.set(sectionModel:self)
         cellModels.insert(cellModel, atIndex:index)
     }
     
     // MARK: Deletions
-    public func remove(#cellModel:RLDTableViewCellModel) {
+    public func remove(cellModel:RLDTableViewCellModel) {
         cellModel.set(sectionModel:self)
         cellModels = cellModels.filter( {!($0 === cellModel)} )
     }
@@ -132,28 +132,28 @@ public class RLDTableViewModel {
     // MARK: Adding section models
     public func addNewSectionModel() -> RLDTableViewSectionModel {
         let newSectionModel = RLDTableViewSectionModel()
-        add(sectionModel:newSectionModel)
+        add(newSectionModel)
         return newSectionModel
     }
     
-    private func add(#sectionModel:RLDTableViewSectionModel) {
+    private func add(sectionModel:RLDTableViewSectionModel) {
         sectionModel.set(tableModel:self)
         sectionModels.append(sectionModel)
     }
     
     // MARK: Adding cell models
-    public func add(#cellModel:RLDTableViewCellModel) {
-        if count(sectionModels) == 0 {
+    public func add(cellModel:RLDTableViewCellModel) {
+        if sectionModels.count == 0 {
             addNewSectionModel()
         }
-        add(cellModel:cellModel, toSectionModel:sectionModels.last!)
+        add(cellModel, toSectionModel:sectionModels.last!)
     }
     
-    public func add(#cellModel:RLDTableViewCellModel, toSectionModel sectionModel:RLDTableViewSectionModel) {
-        if !contains(sectionModels, sectionModel) {
-            add(sectionModel:sectionModel)
+    public func add(cellModel:RLDTableViewCellModel, toSectionModel sectionModel:RLDTableViewSectionModel) {
+        if !sectionModels.contains(sectionModel) {
+            add(sectionModel)
         }
-        sectionModel.add(cellModel:cellModel)
+        sectionModel.add(cellModel)
     }
     
     // MARK: Section index titles
@@ -172,7 +172,7 @@ public class RLDTableViewModel {
                     }
                 }
                 
-                if count(indexTitles) > 0 {
+                if indexTitles.count > 0 {
                     _sectionIndexTitles = indexTitles
                 }
             }

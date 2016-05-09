@@ -47,7 +47,7 @@ public class RLDTableViewController:UIViewController {
         tableView = UITableView(frame:CGRectZero, style:style)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
     }
     
@@ -126,8 +126,8 @@ public class RLDTableViewController:UIViewController {
     
     // MARK: Keyboard notifications handling
     private func startObservingKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShowWithKeyboardChangeNotification:"), name:UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHideWithKeyboardChangeNotification:"), name:UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RLDTableViewController.keyboardWillShowWithKeyboardChangeNotification(_:)), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RLDTableViewController.keyboardWillHideWithKeyboardChangeNotification(_:)), name:UIKeyboardWillHideNotification, object: nil)
     }
     
     private func stopObservingKeyboardNotifications() {
@@ -191,7 +191,7 @@ public class RLDTableViewController:UIViewController {
     // MARK: Selection clearing
     private func clearTableViewSelection(animated:Bool) {
         if !tableView!.multipleSelectionModeEnabled {
-            if let indexPathForSelectedRow = tableView?.indexPathForSelectedRow() {
+            if let indexPathForSelectedRow = tableView?.indexPathForSelectedRow {
                 synchronizeDeselectionAnimationOfRow(indexPathForSelectedRow, animated:animated)
             }
         }

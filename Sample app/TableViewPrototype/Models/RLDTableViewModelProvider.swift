@@ -48,7 +48,7 @@ class RLDTableViewModelProvider {
         
         cellModel.titleForDeleteConfirmationButton = RLDTableViewModelProvider.TableViewCellTitleForDeleteConfirmationButton
         
-        tableViewModel.add(cellModel:cellModel)
+        tableViewModel.add(cellModel)
     }
     
 }

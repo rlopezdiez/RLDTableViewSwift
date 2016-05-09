@@ -9,7 +9,7 @@ public class RLDTableViewEventHandler {
     }
     
     // MARK: Suitability checking
-    public class func canHandle(#tableView:UITableView, viewModel:RLDTableViewReusableViewModel, view:UIView) -> Bool {
+    public class func canHandle(tableView:UITableView, viewModel:RLDTableViewReusableViewModel, view:UIView) -> Bool {
         return false
     }
     
@@ -51,8 +51,8 @@ public class RLDTableViewCellEventHandler:RLDTableViewEventHandler {
     public func editActions() -> [UITableViewRowAction]? { return nil }
     
     // MARK: Copy and Paste
-    public func canPerform(#action:Selector, withSender sender:AnyObject) -> Bool { return false }
-    public func performAction(#action:Selector, withSender sender:AnyObject) {}
+    public func canPerform(action:Selector, withSender sender:AnyObject) -> Bool { return false }
+    public func performAction(action:Selector, withSender sender:AnyObject) {}
 }
 
 // MARK: RLDTableViewSectionAccessoryViewEventHandler class

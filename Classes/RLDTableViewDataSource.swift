@@ -10,18 +10,18 @@ public class RLDTableViewDataSource:NSObject, UITableViewDataSource {
     
     // MARK: Cell generation
     public func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
-        let cellModel = self.cellModel(indexPath:indexPath)
-        return tableView.dequeueReusableCellWithIdentifier(cellModel.reuseIdentifier, forIndexPath:indexPath) as! UITableViewCell
+        let cellModel = self.cellModel(indexPath)
+        return tableView.dequeueReusableCellWithIdentifier(cellModel.reuseIdentifier, forIndexPath:indexPath) 
     }
     
     // MARK: Sections
     public func numberOfSectionsInTableView(tableView:UITableView) -> Int {
-        return count(tableViewModel!.sectionModels)
+        return tableViewModel!.sectionModels.count
     }
     
     public func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
         let sectionModel = tableViewModel!.sectionModels[section]
-        return count(sectionModel.cellModels)
+        return sectionModel.cellModels.count
     }
     
     public func tableView(tableView:UITableView, titleForHeaderInSection section:Int) -> String? {
@@ -45,12 +45,12 @@ public class RLDTableViewDataSource:NSObject, UITableViewDataSource {
     }
     
     // MARK: Sections index titles
-    public func sectionIndexTitlesForTableView(tableView:UITableView) -> [AnyObject]! {
+    public func sectionIndexTitlesForTableView(tableView:UITableView) -> [String]? {
         return tableViewModel!.sectionIndexTitles
     }
     
     public func tableView(tableView:UITableView, sectionForSectionIndexTitle title:String, atIndex index:Int) -> Int {
-        for (index, sectionModel) in enumerate(tableViewModel!.sectionModels) {
+        for (index, sectionModel) in tableViewModel!.sectionModels.enumerate() {
             if let indexTitle = sectionModel.indexTitle {
                 if indexTitle == title {
                     return index
@@ -62,7 +62,7 @@ public class RLDTableViewDataSource:NSObject, UITableViewDataSource {
     
     // MARK: Data source edition
     public func tableView(tableView:UITableView, canEditRowAtIndexPath indexPath:NSIndexPath) -> Bool {
-        let cellModel = self.cellModel(indexPath:indexPath)
+        let cellModel = self.cellModel(indexPath)
         if let editable = cellModel.editable {
             return editable
         }
@@ -70,7 +70,7 @@ public class RLDTableViewDataSource:NSObject, UITableViewDataSource {
     }
     
     public func tableView(tableView:UITableView, canMoveRowAtIndexPath indexPath:NSIndexPath) -> Bool {
-        let cellModel = self.cellModel(indexPath:indexPath)
+        let cellModel = self.cellModel(indexPath)
         if let movable = cellModel.movable {
             return movable
         }
@@ -93,17 +93,17 @@ public class RLDTableViewDataSource:NSObject, UITableViewDataSource {
         let destinationSectionModel = tableViewModel!.sectionModels[destinationIndexPath.section]
         let cellModel = sourceSectionModel.cellModels[sourceIndexPath.row]
         
-        sourceSectionModel.remove(cellModel:cellModel)
-        destinationSectionModel.insert(cellModel:cellModel, atIndex:destinationIndexPath.row)
+        sourceSectionModel.remove(cellModel)
+        destinationSectionModel.insert(cellModel, atIndex:destinationIndexPath.row)
     }
     
     private func tableView(tableView:UITableView, commitInsertionForRowAtIndexPath indexPath:NSIndexPath) {
         let sectionModel = tableViewModel!.sectionModels[indexPath.section]
         if let defaultCellModelClassForInsertions = sectionModel.defaultCellModelClassForInsertions {
             let cellModelType = NSClassFromString(defaultCellModelClassForInsertions) as! RLDTableViewCellModel.Type
-            let cellModel = cellModelType()
+            let cellModel = cellModelType.init()
             
-            sectionModel.insert(cellModel:cellModel, atIndex:indexPath.row)
+            sectionModel.insert(cellModel, atIndex:indexPath.row)
             tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimation.Automatic)
         }
     }
@@ -112,12 +112,12 @@ public class RLDTableViewDataSource:NSObject, UITableViewDataSource {
         let sectionModel = tableViewModel!.sectionModels[indexPath.section]
         let cellModel = sectionModel.cellModels[indexPath.row]
         
-        sectionModel.remove(cellModel:cellModel)
+        sectionModel.remove(cellModel)
         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimation.Automatic)
     }
     
     // MARK: Model accessors
-    private func cellModel(#indexPath:NSIndexPath) -> RLDTableViewCellModel {
+    private func cellModel(indexPath:NSIndexPath) -> RLDTableViewCellModel {
         let sectionModel = tableViewModel!.sectionModels[indexPath.section]
         return sectionModel.cellModels[indexPath.row]
     }
