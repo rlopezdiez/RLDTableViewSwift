@@ -3,7 +3,7 @@ import RLDTableViewSwift
 
 class RLDGenericTableViewCellEventHandler:RLDTableViewCellEventHandler {
     // MARK: Suitability checking
-    override class func canHandle(#tableView:UITableView, viewModel:RLDTableViewReusableViewModel, view:UIView) -> Bool {
+    override class func canHandle(tableView:UITableView, viewModel:RLDTableViewReusableViewModel, view:UIView) -> Bool {
         if let viewModel = viewModel as? RLDGenericTableViewCellModel,
             let view = view as? RLDGenericTableViewCell {
                 return true
